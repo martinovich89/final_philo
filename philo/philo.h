@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martin <martin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mhenry <mhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 14:31:32 by martin            #+#    #+#             */
-/*   Updated: 2022/02/17 02:02:44 by martin           ###   ########.fr       */
+/*   Updated: 2022/02/17 14:53:35 by mhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@
 # include <limits.h>
 # include <pthread.h>
 
-typedef struct	s_phi
+typedef struct s_phi
 {
 	struct s_vars	*vars;
 	pthread_t		philo;
 	pthread_mutex_t	*right_fork;
 	pthread_mutex_t	*left_fork;
 	pthread_mutex_t	*first_fork;
-	pthread_mutex_t *last_fork;
+	pthread_mutex_t	*last_fork;
 	int				dead;
 	int				*satiated;
 	int				meal_counter;
@@ -40,7 +40,7 @@ typedef struct	s_phi
 	size_t			id;
 }				t_phi;
 
-typedef struct	s_vars
+typedef struct s_vars
 {
 	t_phi			*phi;
 	pthread_mutex_t	*mutex;
@@ -74,7 +74,7 @@ void	destroy_all_mutex(t_vars *vars);
 int		join_all_threads(t_vars *vars);
 int		clear_all(t_vars *vars);
 int		ft_error(t_vars *vars, char *err_msg, int ret);
-size_t	get_current_time();
+size_t	get_current_time(void);
 int		check_arg(char *str);
 void	set_phi(t_phi *phi);
 int		unlock_and_return(pthread_mutex_t *mutex1, pthread_mutex_t *mutex2);

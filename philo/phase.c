@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phase.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martin <martin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mhenry <mhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:55:08 by martin            #+#    #+#             */
-/*   Updated: 2022/02/17 01:55:57 by martin           ###   ########.fr       */
+/*   Updated: 2022/02/17 15:36:32 by mhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	sleep_phase(t_phi *phi)
 {
 	if (print_status(phi, "is sleeping", 3))
 		return (1);
+	usleep(10);
 	if (sleep_until(phi, get_current_time() + (size_t)phi->vars->tts * 1000))
 		return (1);
 	return (0);
@@ -50,6 +51,7 @@ int	think_phase(t_phi *phi)
 {
 	if (print_status(phi, "is thinking", 3))
 		return (1);
+	usleep(10);
 	return (0);
 }
 

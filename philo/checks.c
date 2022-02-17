@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martin <martin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mhenry <mhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:51:44 by martin            #+#    #+#             */
-/*   Updated: 2022/02/17 01:57:11 by martin           ###   ########.fr       */
+/*   Updated: 2022/02/17 14:49:42 by mhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	check_arg(char *str)
 
 int	check_satiated(t_phi *phi)
 {
-	t_vars *vars;
+	t_vars	*vars;
 
 	vars = phi->vars;
 	pthread_mutex_lock(&vars->meal);

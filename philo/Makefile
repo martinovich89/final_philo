@@ -6,7 +6,7 @@ INC			=	philo.h
 
 CC			=	gcc
 
-CFLAGS		=	-Wall -Wextra -Werror -pthread #-fsanitize=thread
+CFLAGS		=	-Wall -Wextra -Werror -pthread #-fsanitize=addres
 
 RM			=	rm
 
@@ -18,7 +18,7 @@ all:	$(OBJS)
 %o:		%c
 		$(CC) $(CFLAGS) $(INC) -o $@ -c $<
 
-clean:	$(OBJS)
+clean:
 		$(RM) $(OBJS)
 
 fclean:	clean

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martin <martin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mhenry <mhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:52:49 by martin            #+#    #+#             */
-/*   Updated: 2022/02/17 01:56:37 by martin           ###   ########.fr       */
+/*   Updated: 2022/02/17 15:42:43 by mhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void	set_phi(t_phi *phi)
 {
-	t_vars *vars;
+	t_vars	*vars;
 
 	vars = phi->vars;
 	phi->left_fork = &vars->mutex[phi->id - 1];
-	phi->right_fork = vars->mutex + ((int)phi->id != phi->philo_count) * (phi->id);
+	phi->right_fork = vars->mutex
+		+ ((int)phi->id != phi->philo_count) * (phi->id);
 	if (phi->id % 2 != 0)
 	{
 		phi->first_fork = phi->left_fork;
@@ -62,7 +63,7 @@ int	set_vars(int argc, char **argv, t_vars *vars)
 	return (0);
 }
 
-int alloc_philo_and_mutex(t_vars *vars)
+int	alloc_philo_and_mutex(t_vars *vars)
 {
 	vars->phi = malloc(sizeof(t_phi) * (vars->philo_count));
 	if (!vars->phi)
@@ -92,7 +93,7 @@ int	init_mutex(t_vars *vars)
 
 int	init_philo_and_mutex(t_vars *vars)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (init_mutex(vars))
@@ -104,6 +105,7 @@ int	init_philo_and_mutex(t_vars *vars)
 		vars->phi[i].vars = vars;
 		vars->phi[i].id = i + 1;
 		vars->phi[i].satiated = &vars->satiated;
+		vars->phi[i].last_meal = get_current_time();
 		if (pthread_create(&vars->phi[i].philo,
 				NULL, &routine, (void *)(vars->phi + i)) != 0)
 		{

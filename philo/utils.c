@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martin <martin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mhenry <mhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:45:29 by martin            #+#    #+#             */
-/*   Updated: 2022/02/17 01:57:01 by martin           ###   ########.fr       */
+/*   Updated: 2022/02/17 14:55:07 by mhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(char *str)
 	return ((int)nb * sign);
 }
 
-int		unlock_and_return(pthread_mutex_t *mutex1, pthread_mutex_t *mutex2)
+int	unlock_and_return(pthread_mutex_t *mutex1, pthread_mutex_t *mutex2)
 {
 	if (mutex1)
 		pthread_mutex_unlock(mutex1);

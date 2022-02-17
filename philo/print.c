@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martin <martin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mhenry <mhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:54:19 by martin            #+#    #+#             */
-/*   Updated: 2022/02/17 01:54:50 by martin           ###   ########.fr       */
+/*   Updated: 2022/02/17 14:54:07 by mhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	build_str_to_print(t_phi *phi, char *str_to_print, char *status_str)
 
 void	ft_print(t_phi *phi, char *status_str)
 {
-	char str_to_print[60];
+	char	str_to_print[60];
 
 	build_str_to_print(phi, str_to_print, status_str);
 	write(1, str_to_print, ft_strlen(str_to_print));
@@ -37,7 +37,7 @@ void	ft_print(t_phi *phi, char *status_str)
 
 int	print_status(t_phi *phi, char *status_str, int status)
 {
-	t_vars *vars;
+	t_vars	*vars;
 
 	vars = phi->vars;
 	pthread_mutex_lock(&vars->death);
