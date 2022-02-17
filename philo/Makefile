@@ -12,16 +12,18 @@ RM			=	rm
 
 OBJS		=	$(SRCS:.c=.o)
 
-all:	$(OBJS)
-		$(CC) $(CFLAGS) $(INC) $(OBJS) -o $(NAME)
+all: $(NAME)
 
-%o:		%c
-		$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(INC) $(OBJS) -o $(NAME)
+
+%o: %c
+	$(CC) $(CFLAGS) $(INC) -o $@ -c $<
 
 clean:
-		$(RM) $(OBJS)
+	$(RM) $(OBJS)
 
-fclean:	clean
-		$(RM) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
-re:		fclean all
+re: fclean all
