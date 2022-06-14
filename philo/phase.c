@@ -41,7 +41,6 @@ int	sleep_phase(t_phi *phi)
 {
 	if (print_status(phi, "is sleeping", 3))
 		return (1);
-	usleep(10);
 	if (sleep_until(phi, get_current_time() + (size_t)phi->vars->tts * 1000))
 		return (1);
 	return (0);
@@ -51,7 +50,7 @@ int	think_phase(t_phi *phi)
 {
 	if (print_status(phi, "is thinking", 3))
 		return (1);
-	usleep(10);
+	sleep_until(phi, get_current_time() + (size_t)(phi->vars->ttd - (phi->vars->tte + phi->vars->tts)) * 900);
 	return (0);
 }
 
