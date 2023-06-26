@@ -1,6 +1,6 @@
 **# FINAL_PHILO**
 
-**This project consists in solving the famous philosophers diner puzzle.**
+**-> This project consists in solving the famous philosophers diner puzzle.**
 
 We were allowed to use :  
 memset  
@@ -18,7 +18,7 @@ pthread_mutex_destroy
 pthread_mutex_lock  
 pthread_mutex_unlock
 
-**to run it :**  
+**-> to run it :**  
 
 $> make  
 $> ./philo <number of philosophers> <time to eat (ms)> <time to sleep (ms)> <time to die (ms)> <minimum amount of diners (optional)>  
