@@ -27,6 +27,7 @@ For example, with something like that :
 $> ./philo 200 200 399  
 a philosopher should die quickly due to starvation.
 
-You can check for dataraces using the -fsanitize=thread flag in the compile compile command in the Makefile.  
-Additionally, there is a site where you can enter the output to make sure all the philosophers are behaving as intended.  
+-> You can check for dataraces using the -fsanitize=thread flag in the compile compile command in the Makefile.  
+
+-> Additionally, there is a site where you can enter the output to make sure all the philosophers are behaving as intended.  
 https://nafuka11.github.io/philosophers-visualizer/
