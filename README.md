@@ -1,45 +1,28 @@
-# final_philo
+**# FINAL_PHILO**
 
-This project consists in solving the famous philosophers diner puzzle.
+**This project consists in solving the famous philosophers diner puzzle.**
 
-We were allowed to use :
-
-memset
-
-printf
-
-malloc
-
-free
-
-write
-
-usleep
-
-gettimeofday
-
-pthread_create
-
-pthread_detach
-
-pthread_join
-
-pthread_mutex_init
-
-pthread_mutex_destroy
-
-pthread_mutex_lock
-
+We were allowed to use :  
+memset  
+printf  
+malloc  
+free   
+write  
+usleep  
+gettimeofday  
+pthread_create  
+pthread_detach  
+pthread_join  
+pthread_mutex_init  
+pthread_mutex_destroy  
+pthread_mutex_lock  
 pthread_mutex_unlock
 
-to run it :
+**to run it :**  
 
-$> make
+$> make  
+$> ./philo <number of philosophers> <time to eat (ms)> <time to sleep (ms)> <time to die (ms)> <minimum amount of diners (optional)>  
 
-$> ./philo <number of philosophers> <time to eat (ms)> <time to sleep (ms)> <time to die (ms)> <minimum amount of diners (optional)>
-
-For example, with something like that :
-
-$> ./philo 200 200 399
-
+For example, with something like that :  
+$> ./philo 200 200 399  
 a philosopher should die quickly due to starvation.
