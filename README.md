@@ -1,6 +1,6 @@
 **# FINAL_PHILO**
 
-**-> This project consists in solving the famous philosophers diner puzzle.**
+**-> This project consists in solving the famous dining philosophers problem.**
 
 We were allowed to use :  
 memset  
