@@ -20,11 +20,13 @@ pthread_mutex_unlock
 
 **-> to run it :**  
 
-$> make  
-$> ./philo <philosophers count> <time to die (ms)> <time to eat (ms)> <time to sleep (ms)> <minimum amount of diners (sec, optional)>  
+```$> make```
+
+```$> ./philo <philosophers count> <time to die (ms)> <time to eat (ms)> <time to sleep (ms)> <minimum amount of diners (sec, optional)>```
 
 For example, with something like that :  
-$> ./philo 4 399 200 200
+```$> ./philo 4 399 200 200```
+
 a philosopher should die quickly due to starvation.
 
 -> You can check for dataraces using the -fsanitize=thread flag in the compile compile command in the Makefile.  
