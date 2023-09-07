@@ -21,7 +21,7 @@ pthread_mutex_unlock
 **-> to run it :**  
 
 $> make  
-$> ./philo <number of philosophers> <time to die (ms)> <time to eat (ms)> <time to sleep (ms)> <minimum amount of diners (sec, optional)>  
+$> ./philo <philosophers count> <time to die (ms)> <time to eat (ms)> <time to sleep (ms)> <minimum amount of diners (sec, optional)>  
 
 For example, with something like that :  
 $> ./philo 4 399 200 200
